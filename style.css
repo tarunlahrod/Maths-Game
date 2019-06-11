@@ -156,3 +156,18 @@ html{
 /*    visibility: hidden;*/
     display: none;
 }
+
+#gameover{
+    width: 500px;
+    height: 200px;
+    background: linear-gradient(#f3ca6b, #f3786c);
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 100px;
+    left: 45px;
+    z-index: 2;
+    display: none;
+}
