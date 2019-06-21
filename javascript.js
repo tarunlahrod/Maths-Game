@@ -26,8 +26,12 @@
 
 //--------X-------X-------X--------X--------X-------X--------//
 
+
+
 var playing = false;
 var score;
+
+
 // If we click on the start/reset
 document.getElementById("startreset").onclick = function (){
     // If we are playing
@@ -46,7 +50,7 @@ document.getElementById("startreset").onclick = function (){
                 // yes - continue
                 // no - game over
 
-document.getElementById("startreset").innerHTML = "Reset Game";// butoon to reset
+document.getElementById("startreset").innerHTML = "Reset Game";// button to reset
         // generate new Q&A
 
 
