@@ -1,5 +1,16 @@
 # Maths-Game
 This repo contains the code for a Maths Game webpage using HTML, CSS and JAVASCRIPT only.
 
-## Current status: Under Construction :construction_worker:
-Stay tuned.
+## Current status: Completed, Cheers! :clinking_glasses:
+<br>
+
+**Fully functional game [here](https://codepen.io/tarunlahrod/full/JQNpZL/)**
+
+
+
+```
+<p> Let's Play! </p>
+```
+
+
+## Screenshot
