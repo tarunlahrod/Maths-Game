@@ -69,8 +69,41 @@ document.getElementById("startreset").onclick = function (){
     }
 }
 
+// Clicking on the answer box
+for(i=1; i<5; i++){
+    document.getElementById("box"+i).onclick = function(){
+    // check if we are playing
+    if(playing == true){
 
+        // 'this' gives the element we clicked
+        if(this.innerHTML == correctAns){
+            // correct answer
+            score++;
+            document.getElementById("scorevalue").innerHTML = score;
+            
+            // show the "correct answer" box and hide "wrong" box
+            hide("wrong");
+            show("correct");
+            // show for 1sec and then hide it
+            setTimeout(function(){
+                    hide("correct");
+                }, 1000);
 
+            // generate next question
+            generateQA();
+        }
+        else{
+            // wrong answer
+            show("wrong");
+            hide("correct");
+            // show for 1sec and then hide it
+            setTimeout(function(){
+                hide("wrong");
+            }, 1000);
+        }
+    }
+}
+}
 // If we click on answer box
     // If we are playing
         // correct?
@@ -142,14 +175,23 @@ function generateQA(){
     // fill one box with correct ans
     document.getElementById("box"+ correctPosition).innerHTML = correctAns; 
 
+
+    // filling all boxes with different answers
+    var answers = [correctAns];
+
     // fill other box with wrong answer
     for(i=1; i<=4; i++){
         if(i != correctPosition){
             // wrongAns = product of two random numbers
-            var wrongAns = (1 + Math.round(9*Math.random()) ) * (1 + Math.round(9*Math.random()));
-            if(wrongAns == correctAns)
-                wrongAns += 12;
-            document.getElementById("box" + i).innerHTML = wrongAns;
+            var wrongAns;
+
+            // wrongAns must not be equal to correctAns 
+            do{
+                wrongAns = (1 + Math.round(9*Math.random()) ) * (1 + Math.round(9*Math.random()));
+            }while(answers.indexOf(wrongAns)>-1);
+        
+        document.getElementById("box" + i).innerHTML = wrongAns;
+        answers.push(wrongAns);         
         }
     }
 }
