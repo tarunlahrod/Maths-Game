@@ -14,3 +14,4 @@ This repo contains the code for a Maths Game webpage using HTML, CSS and JAVASCR
 
 
 ## Screenshot
+![Game](https://github.com/tarunlahrod/Maths-Game/blob/master/Screenshot/image1.png)
