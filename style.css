@@ -1,6 +1,10 @@
 html{
     height: 100%;
     background: radial-gradient(circle, #fff, #ccc);
+    background: -webkit-radial-gradient(circle, #fff, #ccc);
+    background: -o-radial-gradient(circle, #fff, #ccc);
+    background: -moz-radial-gradient(circle, #fff, #ccc);
+
 }
 
 #container{
@@ -161,6 +165,10 @@ html{
     width: 500px;
     height: 200px;
     background: linear-gradient(#f3ca6b, #f3786c);
+    background: -webkit-linear-gradient(#f3ca6b, #f3786c);
+    background: -moz-linear-gradient(#f3ca6b, #f3786c);
+    background: -o-linear-gradient(#f3ca6b, #f3786c);
+
     color: white;
     font-size: 2.5em;
     text-align: center;
